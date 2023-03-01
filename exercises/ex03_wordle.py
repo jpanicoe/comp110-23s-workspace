@@ -54,6 +54,5 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
     if win is True:
         print(f"You won in {turn}/6 turns!")
-
 if __name__ == "__main__":
     main()
