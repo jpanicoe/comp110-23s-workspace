@@ -1,4 +1,4 @@
-"""list Utility Functions"""
+"""list Utility Functions."""
 ___author___: 730466273
 
 def all(a: list[int], b: int) -> bool:
