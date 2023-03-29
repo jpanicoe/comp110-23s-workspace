@@ -54,7 +54,7 @@ def testmode1() -> None:
 
 def testnone() -> None: 
     """No Mode."""
-    dict_ie: dict[str, str] = {"Marc": "green", "Ezri": "yellow", "Kris": "red"}
+    dict_ie: dict[str, str] = {"Marc": "green", "Ezri": "red", "Kris": "yellow"}
     assert favorite_color(dict_ie) == "green"
 
 

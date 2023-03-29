@@ -20,9 +20,9 @@ def favorite_color(colors: dict[str, str]) -> str:
     """Favorite Color."""
     if colors == {}: 
         return ""
-    color = count(list(colors.values()))
-    keys = list(color.keys())
-    values = list(color.keys())
+    mode_color = count(list(colors.values()))
+    keys = list(mode_color.keys())
+    values = list(mode_color.keys())
     index = values.index(max(values))
     return keys[index]
 
