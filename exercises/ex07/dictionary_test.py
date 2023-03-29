@@ -30,8 +30,8 @@ def testrepeat() -> None:
 
 def testmode2() -> None: 
     """Modes."""
-    list_ie: list[str] = {"he", "him", "she", "he", "him"}
-    assert count(list_ie) == {"he": 2, "him": 2, "she": 1}
+    list_ie: list[str] = {"me", "my", "he", "me", "my"}
+    assert count(list_ie) == {"me": 2, "my": 2, "he": 1}
 
 
 def testempty() -> None: 
@@ -42,8 +42,8 @@ def testempty() -> None:
 
 def testlistnormal() -> None:
     """Normal."""
-    list_ie: list[str] = {"he", "him", "she", "her"}
-    assert count(list_ie) == {"he": 1, "him": 1, "she": 1, "her": 1}
+    list_ie: list[str] = {"me", "my", "he", "we"}
+    assert count(list_ie) == {"me": 1, "my": 1, "he": 1, "we": 1}
 
 
 def testmode1() -> None:
