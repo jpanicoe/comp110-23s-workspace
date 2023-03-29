@@ -2,18 +2,18 @@
 __author__ = "730466273"
 
 
-def invert(dict2: dict[str, str]) -> dict[str, str]:
+def invert(dict1: dict[str, str]) -> dict[str, str]:
     """Invert Dictionary."""
-    dict1: dict[str, str] = {}
-    if dict2 == {}:
+    dict2: dict[str, str] = {}
+    if dict1 == {}:
         return {}
-    for key in dict2:
-        dict1[dict2[key]] = key
+    for key in dict1:
+        dict2[dict1[key]] = key
     repeat: dict[str, int] = {}
-    repeat = count(dict2.values())
+    repeat = count(dict1.values())
     if max(list(repeat.values())) > 1:
         raise KeyError("Repeated Keys Present")
-    return dict1
+    return dict2
 
 
 def favoritecolor(colors: dict[str, str]) -> str:

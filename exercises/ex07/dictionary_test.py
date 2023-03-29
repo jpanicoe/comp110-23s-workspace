@@ -4,20 +4,20 @@ __author__ = "7304662773"
 
 import pytest
 from dictionary import invert
-from dictionary import favoritecolor
+from dictionary import favorite_color
 from dictionary import count
 
 
 def emptydict() -> None:
     """Edge Case."""
-    dictie: dict[str, str] = {}
-    assert invert(dictie) == {}
+    dict_ie: dict[str, str] = {}
+    assert invert(dict_ie) == {}
 
 
 def testnormal() -> None: 
     """Normal."""
-    dictie: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
-    assert invert(dictie) == {'jordan': 'kris', 'jordan': 'michael'}
+    dict_ie: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
+    assert invert(dict_ie) == {'jordan': 'kris', 'jordan': 'michael'}
 
 
 def testrepeat() -> None:
@@ -30,35 +30,35 @@ def testrepeat() -> None:
 
 def testmode2() -> None: 
     """Modes."""
-    listie: list[str] = {"he", "him", "she", "he", "him"}
-    assert count(listie) == {"he": 2, "him": 2, "she": 1}
+    list_ie: list[str] = {"he", "him", "she", "he", "him"}
+    assert count(list_ie) == {"he": 2, "him": 2, "she": 1}
 
 
 def testempty() -> None: 
     """Empty."""
-    listie: list[str] = []
-    assert count(listie) == ()
+    list_ie: list[str] = []
+    assert count(list_ie) == ()
 
 
 def testlistnormal() -> None:
     """Normal."""
-    listie: list[str] = {"he", "him", "she", "her"}
-    assert count(listie) == {"he": 1, "him": 1, "she": 1, "her": 1}
+    list_ie: list[str] = {"he", "him", "she", "her"}
+    assert count(list_ie) == {"he": 1, "him": 1, "she": 1, "her": 1}
 
 
 def testmode1() -> None:
     """Multiple Modes."""
-    dictie: dict[str, str] = {"Marc": "yellow", "Ezri": "blue", "Kris": "blue"}
-    assert favoritecolor(dictie) == "blue"
+    dict_ie: dict[str, str] = {"Marc": "blue", "Ezri": "blue", "Kris": "blue"}
+    assert favorite_color(dict_ie) == "blue"
 
 
 def testnone() -> None: 
     """No Mode."""
-    dictie: dict[str, str] = {"Marc": "green", "Ezri": "red", "Kris": "blue"}
-    assert favoritecolor(dictie == "green")
+    dict_ie: dict[str, str] = {"Marc": "green", "Ezri": "yellow", "Kris": "red"}
+    assert favorite_color(dict_ie) == "green"
 
 
 def testemptydict() -> None: 
     """Edge Case."""
-    dictie: dict[str, str] = {}
-    assert favoritecolor(dictie) == ""
+    dict_ie: dict[str, str] = {}
+    assert favorite_color(dict_ie) == ""
