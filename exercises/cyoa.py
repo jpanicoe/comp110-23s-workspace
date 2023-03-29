@@ -1,7 +1,6 @@
 """Choose Your Own Adventure."""
 ___author___ = "730466273"
 
-
 from random import randint
 
 
