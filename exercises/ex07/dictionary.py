@@ -1,0 +1,38 @@
+"""EX07 Dictionary Functions."""
+__author__ = "730466273"
+
+
+def invert(dict2: dict[str, str]) -> dict[str, str]:
+    """Invert Dictionary."""
+    dict1: dict[str, str] = {}
+    if dict2 == {}:
+        return {}
+    for key in dict2:
+        dict1[dict2[key]] = key
+    repeat: dict[str, int] = {}
+    repeat = count(dict2.values())
+    if max(list(repeat.values())) > 1:
+        raise KeyError("Repeated Keys Present")
+    return dict1
+
+
+def favoritecolor(colors: dict[str, str]) -> str:
+    """Favorite Color."""
+    if colors == {}: 
+        return ""
+    color = count(list(colors.values()))
+    keys = list(color.keys())
+    values = list(color.keys())
+    index = values.index(max(values))
+    return keys[index]
+
+
+def count(list1: list[str]) -> dict[str, int]:
+    """Counts Value in Input List."""
+    result: dict[str, int] = {}
+    for key in list1:
+        if key in result:
+            result[key] += 1
+        else:
+            result[key] = 1
+        return result
