@@ -2,10 +2,10 @@
 __author__ = "7304662773"
 
 
-import pytest
 from dictionary import invert
-from dictionary import favorite_color
+from dictionary import favoritecolor
 from dictionary import count
+import pytest
 
 
 def emptydict() -> None:
@@ -16,8 +16,8 @@ def emptydict() -> None:
 
 def testnormal() -> None: 
     """Normal."""
-    dict_ie: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
-    assert invert(dict_ie) == {'jordan': 'kris', 'jordan': 'michael'}
+    dict_ie: dict[str, str] = {'kris': 'jordan', 'jack': 'panicoe'}
+    assert invert(dict_ie) == {'panicoe': 'jack', 'jordan': 'michael'}
 
 
 def testrepeat() -> None:
@@ -49,16 +49,16 @@ def testlistnormal() -> None:
 def testmode1() -> None:
     """Multiple Modes."""
     dict_ie: dict[str, str] = {"Marc": "blue", "Ezri": "blue", "Kris": "blue"}
-    assert favorite_color(dict_ie) == "blue"
+    assert favoritecolor(dict_ie) == "blue"
 
 
 def testnone() -> None: 
     """No Mode."""
     dict_ie: dict[str, str] = {"Marc": "green", "Ezri": "yellow", "Kris": "red"}
-    assert favorite_color(dict_ie) == "green"
+    assert favoritecolor(dict_ie) == "green"
 
 
 def testemptydict() -> None: 
     """Edge Case."""
     dict_ie: dict[str, str] = {}
-    assert favorite_color(dict_ie) == ""
+    assert favoritecolor(dict_ie) == ""

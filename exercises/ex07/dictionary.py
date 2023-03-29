@@ -29,10 +29,10 @@ def favoritecolor(colors: dict[str, str]) -> str:
 
 def count(list1: list[str]) -> dict[str, int]:
     """Counts Value in Input List."""
-    result: dict[str, int] = {}
+    dict_result: dict[str, int] = {}
     for key in list1:
-        if key in result:
-            result[key] += 1
+        if key in dict_result:
+            dict_result[key] += 1
         else:
-            result[key] = 1
-        return result
+            dict_result[key] = 1
+        return dict_result
