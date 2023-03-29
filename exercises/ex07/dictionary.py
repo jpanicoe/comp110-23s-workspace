@@ -16,7 +16,7 @@ def invert(dict1: dict[str, str]) -> dict[str, str]:
     return dict2
 
 
-def favoritecolor(colors: dict[str, str]) -> str:
+def favorite_color(colors: dict[str, str]) -> str:
     """Favorite Color."""
     if colors == {}: 
         return ""
